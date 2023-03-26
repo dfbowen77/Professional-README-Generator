@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
         licenseBadge = "https://img.shields.io/badge/license-Do%20What%20The%20F*ck%20You%20Want%20To-red"
         break; 
 
-        case "MIT":
+        case "MIT License":
         licenseBadge = "https://shields.io/badge/license-MIT-green"
         break; 
 
@@ -70,18 +70,27 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+        licenseSection = `For more information about the ${license} visit the following link: ${licenseLink}`
+        licenseBadgeSection = `![Github License](${licenseBadge})`
+        switch(license){
+            case "No License":
+                licenseSection = ""
+                licenseBadgeSection = ""
+            break;
+        }
+    }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    console.log("Testing generateMarkdown function")
     license = data.license
     renderLicenseBadge(license)
     renderLicenseLink(license)
     renderLicenseSection(license)
 
   return `# ${data.title}
-![Github License](${licenseBadge})
+${licenseBadgeSection}
 
 ## Description
 ${data.description}
@@ -102,7 +111,7 @@ ${data.installation}
 ${data.usage}
 
 ## License
-For more information about the ${data.license} visit the following link: ${licenseLink}
+${licenseSection}
 
 ## Contributions
 ${data.contributions}
