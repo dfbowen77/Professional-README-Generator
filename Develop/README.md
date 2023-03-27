@@ -1,8 +1,8 @@
-# a
-![Github License](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-success)
+# README Generator
+![Github License](https://shields.io/badge/license-MIT-green)
 
 ## Description
-s
+This project creates a professional README file user user inputs from the command line
 
 ## Table of Contents
 * [Installation](#installation)
@@ -14,24 +14,24 @@ s
 
 
 ## Installation
-g
+Here are the installation instructions
 
 ## Usage
-h
+Here are the usage instructions
 
 ## License
-For more information about the Mozilla Public License 2.0 visit the following link: https://www.mozilla.org/en-US/MPL/2.0/
+For more information about the MIT License visit the following link: https://mit-license.org/
 
 ## Contributions
-j
+Here are the guidelines for how you can contribute
 
 ## Tests
-k
+Here are the instructions for how to run tests
 
 ## Questions
 If you have questions you can contact me via:
-* Email: f
-* GitHub: [d](https://github.com/d) 
+* Email: danbowen2677@gmail.com
+* GitHub: [dfbowen77](https://github.com/dfbowen77) 
 
 
 
