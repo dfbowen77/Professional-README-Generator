@@ -1,8 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-    console.log("Testing renderLicenseBadge function")
-    console.log(license)
+    // switch is used instead of if/else. Switch also performs different actions based on different conditions, except it can be slightly less confusing than many if/else statements.
     switch(license){
         // The license badges were created using the shields.io website.
         // It allows for the use of stock and customized shields
@@ -36,11 +35,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    console.log("Testing renderLicenseBadge function")
-    console.log(license)
     switch(license){
-        // The license badges were created using the shields.io website.
-        // It allows for the use of stock and customized shields
         case "Apache License 2.0":
             licenseLink = "https://www.apache.org/licenses/LICENSE-2.0"
         break; 
@@ -72,6 +67,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
+        // template literals are demarcated by the back ticks. They are used to concatenate text and define strings.
         licenseSection = `For more information about the ${license} visit the following link: ${licenseLink}`
         licenseBadgeSection = `![Github License](${licenseBadge})`
         switch(license){
@@ -84,12 +80,13 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    license = data.license
     renderLicenseBadge(license)
     renderLicenseLink(license)
     renderLicenseSection(license)
 
-  return `# ${data.title}
+    // Template literals are used to generate the markdown... One of the reasons is that Template literals allows multiline strings.
+    // The square brackets in the markdown are used to create link text (e.g. [Installation] is clickable link text that then allows the user to select the #installation section of the document)
+    return `# ${data.title}
 ${licenseBadgeSection}
 
 ## Description
@@ -130,4 +127,5 @@ If you have questions you can contact me via:
 `;
 }
 
+// According to tutorials teacher: The module is a variable that represents the current module, and exports is an object that will be exposed as a module. So, whatever you assign to module.exports will be exposed as a module. 
 module.exports = generateMarkdown;
