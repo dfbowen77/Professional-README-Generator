@@ -1,4 +1,8 @@
 // TODO: Include packages needed for this application
+// In NodeJS, require() is a built-in function to include external modules that exist in separate files.
+// inquirer is a node.js modulee that provides an easy way to capture user input in the command line interface
+// fs is short for file system and it is a node.js module for interacting with the file system on a users computer.
+// The generateMarkdown.js file was written by me to generate the markdown for the readme file. 
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
